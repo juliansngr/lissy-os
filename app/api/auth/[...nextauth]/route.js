@@ -4,7 +4,7 @@ import { MongoDBAdapter } from "@next-auth/mongodb-adapter";
 import clientPromise from "@/lib/mongodb"; // gleich erstellen
 
 export const authOptions = {
-  adapter: MongoDBAdapter(clientPromise),
+  // adapter: MongoDBAdapter(clientPromise),
   providers: [
     TwitchProvider({
       clientId: process.env.TWITCH_CLIENT_ID,
