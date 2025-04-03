@@ -33,7 +33,7 @@ export const authOptions = {
   pages: {
     signIn: "/auth/signin",
   },
-  // debug: true,
+  debug: true,
 };
 
 export const handler = NextAuth(authOptions);
