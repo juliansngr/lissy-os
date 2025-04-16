@@ -2,7 +2,7 @@
 import { signIn } from "next-auth/react";
 import { Twitch } from "lucide-react";
 import Image from "next/image";
-import MainButton from "@/app/components/MainButton";
+import MainButton from "@components/MainButton";
 
 export default function SignInPage() {
   return (

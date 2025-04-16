@@ -9,8 +9,8 @@ function AuthButton() {
   if (session) {
     return (
       <>
-        {session?.user?.name} <br />
-        <button className="btn" onClick={() => signOut()}>
+        {session?.user?.name}
+        <button className="btn btn-primary" onClick={() => signOut()}>
           Sign out
         </button>
       </>
@@ -18,8 +18,7 @@ function AuthButton() {
   }
   return (
     <>
-      Not signed in <br />
-      <button className="btn" onClick={() => signIn()}>
+      <button className="btn btn-primary" onClick={() => signIn()}>
         Sign in
       </button>
     </>

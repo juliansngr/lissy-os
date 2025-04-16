@@ -1,10 +1,13 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
-import MainButton from "../components/MainButton";
+import { authOptions } from "../../api/auth/[...nextauth]/route";
+
 import { LogIn } from "lucide-react";
 import { signOut } from "next-auth/react";
-import LogoutMainButton from "../components/LogoutMainButton";
+import LogoutMainButton from "@components/LogoutMainButton";
+import AppIcon from "@components/AppIcon";
+import PlyrPlayer from "@components/PlyrPlayer";
+import PlyrYouTube from "@components/PlyrYoutube";
 
 export default async function OperatingSystem() {
   const session = await getServerSession(authOptions);
@@ -35,6 +38,11 @@ export default async function OperatingSystem() {
         <p className="text-2xl mb-10">Legendär – Tier 3 Supporter 🏆</p>
       )}
       <LogoutMainButton />
+
+      <div className="flex gap-20 mt-10">
+        <AppIcon name="LissyTube" app="lissytube" link="/os/lissytube" />
+        <AppIcon name="Lissify" app="lissify" link="/os/lissify" />
+      </div>
     </div>
   );
 }
