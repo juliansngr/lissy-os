@@ -6,8 +6,6 @@ import { LogIn } from "lucide-react";
 import { signOut } from "next-auth/react";
 import LogoutMainButton from "@components/LogoutMainButton";
 import AppIcon from "@components/AppIcon";
-import PlyrPlayer from "@components/PlyrPlayer";
-import PlyrYouTube from "@components/PlyrYoutube";
 
 export default async function OperatingSystem() {
   const session = await getServerSession(authOptions);
